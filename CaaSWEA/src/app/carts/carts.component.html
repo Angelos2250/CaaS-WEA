@@ -1,0 +1,18 @@
+<div class="container py-5">
+   <div class="d-flex justify-content-end">
+      <button type="submit" class="btn btn-success" (click)="newCart()">New Cart +</button>
+   </div>
+  <mdb-accordion [multiple]="true" class="container py-5">
+     <mdb-accordion-item *ngFor="let cart of carts">
+      <ng-template mdbAccordionItemHeader>
+         <h2>Shopping Cart #{{ cart.idCart }}</h2>
+      </ng-template>
+      <ng-template mdbAccordionItemBody>
+        <div
+          class="wea5-cart-item"
+          [cart]="cart"
+        ></div>
+      </ng-template>
+    </mdb-accordion-item>
+  </mdb-accordion>
+</div>

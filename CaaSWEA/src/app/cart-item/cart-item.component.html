@@ -1,0 +1,30 @@
+<!-- Custom content-->
+<!-- Shopping cart table -->
+<div class="table-responsive" class="wea5-product-item" [cartId]="cart.idCart!">
+</div>
+ <!-- / Shopping cart table -->
+ <div
+ class="d-flex flex-wrap justify-content-between align-items-center pb-4"
+>
+ <div class="float-right">
+   <button type="button" class="btn btn-primary btn-rounded" (click)="openCheckOutModal()">Checkout</button>
+   <button type="button" class="btn btn-danger btn-rounded" (click)="openDeleteModal()">Delete</button>
+ </div>
+ <div class="d-flex">
+   <div class="text-right mt-4 mr-5 p-4">
+     <label class="text-muted font-weight-normal m-0">Discount</label>
+     <div class="text-large"><strong>{{discount}}€</strong></div>
+   </div>
+   <div class="text-right mt-4 p-4">
+     <label class="text-muted font-weight-normal m-0"
+       >Total price</label
+     >
+     <div class="text-large"><strong>{{total}}€</strong></div>
+   </div>
+ </div>
+</div>
+<!-- End -->
+
+
+ 
+  

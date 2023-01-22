@@ -1,0 +1,8 @@
+
+<form class="ui large form" _lpchecked="1"
+   #loginForm="ngForm"
+   (ngSubmit)="submitForm()">
+   <button class="ui fluid large red submit button" [disabled]="loginForm.invalid">Login</button>
+   <div class="ui error message"></div>
+</form>
+

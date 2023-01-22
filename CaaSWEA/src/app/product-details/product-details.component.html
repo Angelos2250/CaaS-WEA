@@ -1,0 +1,18 @@
+<div class="ui grid" *ngIf="product">
+   <div class="eight wide column">
+   <h1 class="ui header">{{ product.shortDesc }}</h1>
+   <h3 class="ui header">{{ product.downloadLink }}</h3>
+   <div class="ui divider"></div>
+   <div class="ui grid">
+   <div class="four wide column">
+   <h4 class="ui header">Preis</h4>
+   {{ product?.price }}
+   </div>
+   </div>
+   </div>
+   <div class="sixteen wide column">
+   <h3 class="ui header">Beschreibung</h3>
+   {{ product?.description }}
+   </div>
+</div>
+<!-- <button (click)="showBookList()" class="ui red button">Zurück zur Buchliste</button> -->

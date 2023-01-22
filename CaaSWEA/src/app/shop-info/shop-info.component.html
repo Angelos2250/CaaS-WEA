@@ -1,0 +1,38 @@
+<header>
+   <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+      <mdb-carousel-item>
+        <img
+          src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).webp"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+         <div class="d-flex justify-content-center align-items-center h-100">
+           <div class="text-white">
+             <h1 class="mb-3">{{shop.name}}</h1>
+             <h4 class="mb-3">The best shop for digital Art</h4>
+             <a class="btn btn-outline-light btn-lg" [routerLink]="'products'" role="button"
+               >Shop Now!</a
+             >
+           </div>
+         </div>
+       </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item *ngFor="let d of discounts">
+        <img
+          src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).webp"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+         <div class="d-flex justify-content-center align-items-center h-100">
+           <div class="text-white">
+             <h1 class="mb-3">Rabatt-Aktion!</h1>
+             <h4 class="mb-3" *ngIf="d.type == '0'">{{d.value}}€ {{extractDates(d)}}</h4>
+             <h4 class="mb-3" *ngIf="d.type == '1'">{{d.value}}% {{extractDates(d)}}</h4>
+           </div>
+         </div>
+       </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+ </header>

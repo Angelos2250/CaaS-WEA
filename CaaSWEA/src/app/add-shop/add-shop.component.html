@@ -1,0 +1,16 @@
+<h1>Shopformular</h1>
+<form class="ui large form" #myForm="ngForm" (ngSubmit)="submitForm()">
+  <div class="container py-2">
+    <mdb-form-control>
+      <input mdbInput type="text" id="typeText" class="form-control" name="name" [(ngModel)]="shop.name" required/>
+      <label mdbLabel class="form-label" for="typeText">Name</label>
+    </mdb-form-control>
+  </div>
+  <div class="container py-2">
+    <mdb-form-control>
+      <input mdbInput type="text" id="typeText" class="form-control" name="appKey" [(ngModel)]="shop.appKey" required/>
+      <label mdbLabel class="form-label" for="typeText">AppKey</label>
+    </mdb-form-control>
+  </div>
+  <button type="submit" class="btn btn-warning" [disabled]="myForm.invalid">Save</button>
+</form>

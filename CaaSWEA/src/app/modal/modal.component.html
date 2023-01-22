@@ -1,0 +1,85 @@
+<div class="modal-content text-center" *ngIf="state == 'delete'">
+  <div class="modal-header bg-danger text-white d-flex justify-content-center">
+    <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+  </div>
+  <div class="modal-body">
+    <i class="fas fa-times fa-3x text-danger"></i>
+  </div>
+  <div class="modal-footer d-flex justify-content-center">
+    <button type="button" class="btn btn-danger" (click)="modalRef.close()">
+      No
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-danger"
+      data-mdb-dismiss="modal"
+      (click)="deleteCart(cartId)"
+    >
+      Yes
+    </button>
+  </div>
+</div>
+
+<div class="modal-content text-center" *ngIf="state == 'confirm'">
+  <div class="modal-header bg-primary text-white d-flex justify-content-center">
+    <h5 class="modal-title" id="exampleModalLabel">
+      Are you sure you want to Checkout?
+    </h5>
+  </div>
+  <div class="modal-body">
+    <i class="fas fa-money-bill-wave fa-3x text-primary"></i>
+  </div>
+  <div class="modal-footer d-flex justify-content-center">
+    <button type="button" class="btn btn-primary" (click)="modalRef.close()">
+      No
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      data-mdb-dismiss="modal"
+      (click)="checkoutCart(cartId)"
+    >
+      Yes
+    </button>
+  </div>
+</div>
+
+<div class="modal-content" *ngIf="state == 'addToCart'">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Choose cart</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-mdb-dismiss="modal"
+      aria-label="Close"
+      (click)="modalRef.close()"
+    ></button>
+  </div>
+  <ul class="list-group list-group-light">
+    <li class="list-group-item p-4" *ngFor="let cart of carts">
+      Cart #{{ cart.idCart }}
+      <input
+        mdbRadio
+        class="form-check-input justify-content-end"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="{{cart.idCart}}"
+        [(ngModel)]="addtoCartId"
+      />
+    </li>
+  </ul>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      data-mdb-dismiss="modal"
+      (click)="modalRef.close()"
+    >
+      Close
+    </button>
+    <button type="button" class="btn btn-primary" (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+
