@@ -1,0 +1,54 @@
+<h1>Add quantity Discount</h1>
+<form class="ui large form" #myForm="ngForm" (ngSubmit)="submitForm()">
+   <div class="container py-2">
+      <mdb-form-control>
+         <label mdbLabel class="form-label" for="typeText">Type </label>
+         <div></div>
+         <div class="form-check form-check-inline">
+            <input
+              mdbRadio
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inlineRadio1"
+              value="1"
+              [(ngModel)]="discount.type"
+            />
+            <label class="form-check-label" for="inlineRadio1">%</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              mdbRadio
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inlineRadio2"
+              value="0"
+              [(ngModel)]="discount.type"
+            />
+            <label class="form-check-label" for="inlineRadio2">fixed €</label>
+          </div>
+      </mdb-form-control>
+    </div>
+    <div class="container py-2">
+      <mdb-form-control>
+        <input mdbInput type="text" id="typeText" class="form-control" name="value" [(ngModel)]="discount.value" required/>
+        <label mdbLabel class="form-label" for="typeText">Value</label>
+      </mdb-form-control>
+    </div>
+    <div class="container py-2">
+      <mdb-form-control>
+        <input mdbInput type="text" id="typeText" class="form-control" name="name"  [(ngModel)]="qty" required/>
+        <label mdbLabel class="form-label" for="typeText">Quantity</label>
+      </mdb-form-control>
+    </div>
+    <div class="container py-2">
+      <mdb-form-control>
+        <input mdbInput type="text" id="typeText" class="form-control" name="appKey" [(ngModel)]="appKey" required/>
+        <label mdbLabel class="form-label" for="typeText">AppKey</label>
+      </mdb-form-control>
+    </div>
+  <button type="submit" class="btn btn-warning" [disabled]="myForm.invalid">Save</button>
+</form>
+
+<!-- [(ngModel)]="shop.appKey" -->

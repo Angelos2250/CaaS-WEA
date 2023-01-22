@@ -17,18 +17,18 @@ export class CaasService {
   constructor(private http: HttpClient) {}
 
   getShopById(id: string): Observable<Shop> {
-    return this.http.get<any>(`${environment.server}/shops/${id}`);
+    return this.http.get<any>(`${environment.server}/shops/2`);
   }
 
   getDiscountsByShopId(id: string): Observable<Discount[]> {
     return this.http.get<Discount[]>(
-      `${environment.server}/discounts/shop/${id}`
+      `${environment.server}/discounts/shop/2`
     );
   }
 
   getProductsByShopId(id: string): Observable<Product[]> {
     return this.http.get<Product[]>(
-      `${environment.server}/products/shop/${id}`
+      `${environment.server}/products/shop/2`
     );
   }
 
@@ -116,24 +116,24 @@ export class CaasService {
    getSearchedProductsInShop(id:string,fts:string): Observable<Product[]> {
       //api/products/search?fts=pellentesque&shopId=1
       return this.http.get<any>(
-        `${environment.server}/products/search?fts=${fts}&shopId=${id}`);
+        `${environment.server}/products/search?fts=${fts}&shopId=2`);
    }
 
    findavgsalespermonthinshopForYear(id:string,year:string): Observable<Result[]> {
       //api/analytics/findavgsalespermonthinshopforyear?id=1&year=2021
       return this.http.get<any>(
-         `${environment.server}/analytics/findavgsalespermonthinshopforyear?id=1&year=${year}`);
+         `${environment.server}/analytics/findavgsalespermonthinshopforyear?id=2&year=${year}`);
    }
 
    findAvgSalesPerYearInShop(id:string, year: string): Observable<Result> {
       //api/analytics/findavgsalesperyearinshop?id=1&year=2021
       return this.http.get<any>(
-         `${environment.server}/analytics/findavgsalesperyearinshop?id=1&year=${year}`);
+         `${environment.server}/analytics/findavgsalesperyearinshop?id=2&year=${year}`);
    }
    findTotalCarts(id:string): Observable<Result> {
       //api/analytics/findcountcartsinshop?id=1
       return this.http.get<any>(
-         `${environment.server}/analytics/findcountcartsinshop?id=${id}`);
+         `${environment.server}/analytics/findcountcartsinshop?id=2`);
    }
 
    createShop(s : ShopCreate):  Observable<any> {

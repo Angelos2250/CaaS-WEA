@@ -38,7 +38,9 @@ export class ShopInfoComponent {
          let matches: IterableIterator<RegExpMatchArray>;
          const regexp = / [0-9]*,/g;
          matches = discount.rule.matchAll(regexp);
-         dates = "off when buying more then" + matches.next().value + " items";
+         let val = matches.next().value + "";
+         val = val.substring(1, val.length - 1);
+         dates = "off when buying more then " + val + " items";
       }
       return dates;
    }

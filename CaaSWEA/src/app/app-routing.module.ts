@@ -15,12 +15,12 @@ import { StatsComponent } from './stats/stats.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'shop/1',
+    redirectTo: 'shop/2',
     pathMatch: 'full',
   },
   {
     path: 'index.html',
-    redirectTo: 'shop/1',
+    redirectTo: 'shop/2',
     pathMatch: 'full',
   },
   {

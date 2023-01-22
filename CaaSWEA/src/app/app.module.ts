@@ -37,6 +37,9 @@ import { AdminComponent } from './admin/admin.component';
 import { StatsComponent } from './stats/stats.component';
 import {ChartModule} from 'primeng/chart';
 import { AddShopComponent } from './add-shop/add-shop.component';
+import { AddDiscount1Component } from './add-discount1/add-discount1.component';
+import { AddDiscountsComponent } from './add-discounts/add-discounts.component';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +56,9 @@ import { AddShopComponent } from './add-shop/add-shop.component';
     OrderProductItemComponent,
     AdminComponent,
     StatsComponent,
-    AddShopComponent
+    AddShopComponent,
+    AddDiscount1Component,
+    AddDiscountsComponent
   ],
   imports: [
     BrowserModule,
