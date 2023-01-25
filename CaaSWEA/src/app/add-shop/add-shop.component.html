@@ -8,7 +8,7 @@
   </div>
   <div class="container py-2">
     <mdb-form-control>
-      <input mdbInput type="text" id="typeText" class="form-control" name="appKey" [(ngModel)]="shop.appKey" required/>
+      <input mdbInput type="text" id="typeText" class="form-control" name="appKey" [(ngModel)]="shop.appKey"  pattern="[0-9]*" required/>
       <label mdbLabel class="form-label" for="typeText">AppKey</label>
     </mdb-form-control>
   </div>

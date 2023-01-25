@@ -12,15 +12,22 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ShopInfoComponent } from './shop-info/shop-info.component';
 import { StatsComponent } from './stats/stats.component';
 
+// Logout / 
+// Zeiten bei Statistik kann man nicht ändern / 
+// Shop hinzufügen aufgrund von Backend anders implementiert /  
+//Discounts hinzufügen 25% / 
+//Daten nicht sprächend /
+// Ids bei Carts /
+
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'shop/2',
+    redirectTo: 'shop/1',
     pathMatch: 'full',
   },
   {
     path: 'index.html',
-    redirectTo: 'shop/2',
+    redirectTo: 'shop/1',
     pathMatch: 'full',
   },
   {

@@ -36,7 +36,8 @@
         </td>
         <td class="align-middle p-4">
           <input
-            type="text"
+            type="number"
+            min="1"
             class="form-control text-center"
             (change)="updateQtyOfCart(cartId!, product.idProduct!, $event)"
             value="{{ product.qty }}"

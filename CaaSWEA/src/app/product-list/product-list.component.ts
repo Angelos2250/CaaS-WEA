@@ -50,7 +50,7 @@ export class ProductListComponent {
     }
 
    routeToProductDetail(id: string) {
-      this.router.navigate(['/shop/2/products/',id]);
+      this.router.navigate(['/shop/1/products/',id]);
       console.log("clicked");
    }
 }

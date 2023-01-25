@@ -23,6 +23,7 @@ export class AddShopComponent {
       this.cs.createShop(this.shop).subscribe(() => {
          this.shop = new ShopCreate();
          this.myForm.reset(this.shop);
+         alert("Shop created successfully!")
       });
     }
 }

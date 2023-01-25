@@ -1,5 +1,5 @@
 <!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <!-- Left elements -->
     <div class="d-flex">
@@ -12,7 +12,7 @@
           loading="lazy"
           style="margin-top: 2px"
         />
-        Homenick-Ledner
+        {{ shopName }}
       </a>
       <a class="me-5"></a>
       <a class="me-5"></a>
@@ -31,7 +31,7 @@
       <li class="nav-item">
         <a
           class="nav-link active"
-          routerLink="shop/2/products"
+          routerLink="shop/1/products"
           routerLinkActive="active"
           >Products</a
         >
@@ -39,7 +39,7 @@
       <li class="nav-item">
         <a
           class="nav-link active"
-          routerLink="user/50/orders"
+          routerLink="user/1/orders"
           routerLinkActive="active"
           >Orders</a
         >
@@ -68,7 +68,7 @@
       </form>
       <!-- Badge -->
       <li class="nav-item">
-        <a class="nav-link" routerLink="user/50/carts">
+        <a class="nav-link" routerLink="user/1/carts">
           <span><i class="fas fa-shopping-cart"></i></span>
         </a>
       </li>
